@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrasi Pengguna</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- FORM REGISTRASI -->
+    <div class="form-card">
+
+        <div class="form-header">
+            <span class="logo">✦</span>
+
+            <div>
+                <h1>Registrasi Pengguna</h1>
+                <p>Silakan isi data untuk membuat akun baru.</p>
+            </div>
+        </div>
+
+        <form id="registerForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input 
+                        type="text" 
+                        id="nama" 
+                        placeholder="Masukkan nama lengkap"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        placeholder="Masukkan username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="nama@email.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon">No. Telepon</label>
+                    <input 
+                        type="tel" 
+                        id="telepon" 
+                        placeholder="08xxxxxxxxxx"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Minimal 6 karakter"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="jenis">Jenis Kelamin</label>
+
+                    <select id="jenis" required>
+                        <option value="">Pilih jenis kelamin</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-register">
+                + Daftar Sekarang
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- TABEL DATA -->
+    <div class="table-card">
+
+        <div class="table-header">
+            <div>
+                <h2>Data Pengguna</h2>
+                <p>Daftar pengguna yang telah melakukan registrasi.</p>
+            </div>
+
+            <div class="total-user">
+                <span id="totalUser">0</span>
+                <small>Pengguna</small>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>No. Telepon</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="userTable">
+
+                    <tr id="emptyRow">
+                        <td colspan="7">
+                            Belum ada data pengguna.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
